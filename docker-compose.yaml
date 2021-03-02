@@ -115,6 +115,8 @@ services:
     networks:
       - kong-network
     image: postgres:13.1
+    ports:
+      - "5432:5432/tcp"
     environment:
       POSTGRES_DB: kong
       POSTGRES_PASSWORD: kong
